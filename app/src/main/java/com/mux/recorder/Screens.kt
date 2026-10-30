@@ -105,7 +105,8 @@ fun LevelRing(modifier: Modifier = Modifier) {
         rotate(rot * 0.08f, c) {
             for (i in 0 until 72) {
                 val v = Rec.levels[(Rec.head + i * n / 72) % n]
-                val len = r * (0.03f + 0.22f * v) + (if (!live && Rec.state != RecState.PAUSED) r * 0.015f * breath else 0f)
+                // len is a fraction of the radius (it was already multiplied by r, then multiplied by r again below)
+                val len = 0.03f + 0.22f * v + (if (!live && Rec.state != RecState.PAUSED) 0.015f * breath else 0f)
                 drawLine(
                     main.copy(alpha = .35f + .65f * v), pt(r * .97f, i * 5.0), pt(r * (.97f - len), i * 5.0),
                     1.8.dp.toPx() + v * 2.dp.toPx()
