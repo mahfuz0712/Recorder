@@ -1,0 +1,10 @@
+{
+  "name": "Recorder",
+  "version": "1.0.0",
+  "description": "An offline sound recorder with a futuristic HUD design. Record in M4A or lossless WAV, keep recording with the screen off, pause and resume, add markers, and play back with speed control.",
+  "author": "Mohammad Mahfuz Rahman",
+  "ageRating": "3+",
+  "category": "Utilities",
+  "containsAds": false,
+  "type": "app"
+}
